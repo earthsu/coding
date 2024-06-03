@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="kr.ac.hnu.itup.aop.ForLoopTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-31T11:26:56" hostname="DESKTOP-3CCKT5O" time="0.059">
+  <properties/>
+  <testcase name="factorial()" classname="kr.ac.hnu.itup.aop.ForLoopTest" time="0.059"/>
+  <system-out><![CDATA[120
+20:26:56.257 [Test worker] INFO kr.ac.hnu.itup.aop.ForLoopTest -- factorial: 120
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

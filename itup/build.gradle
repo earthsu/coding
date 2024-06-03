@@ -1,0 +1,40 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.6'
+	id 'io.spring.dependency-management' version '1.1.5'
+}
+
+group = 'kr.ac.hnu'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.aspectj:aspectjweaver'  // Maven Repository 사이트 틀어가서 aspectjweaver 찾아서 Gradle(Short)거 복붙
+	// runtimeOnly면 코드 작성할때 나오지 않음 사용하려면 implementation
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	testCompileOnly('org.projectlombok:lombok')
+	testAnnotationProcessor('org.projectlombok:lombok')
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
